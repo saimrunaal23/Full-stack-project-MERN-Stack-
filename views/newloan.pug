@@ -1,0 +1,37 @@
+extends layout
+
+block content
+  .main.container.row
+    .col-md-6.col-md-offset-3
+      h1.display-4.m-b-2 Create a new Loan
+      
+      // register form
+      form(method='POST' action='/loan')
+        div.form-group
+          label(for='customerName') Customer Name:
+          input#customerName.form-control(type='text',  name='customerName')
+        div.form-group
+          label(for='phoneNumber') Phone Number  :
+          input#phoneNumber.form-control(type='number',  name='phoneNumber')
+        div.form-group
+          label(for='email') email :
+          input#email.form-control(type='text',  name='email')
+        div.form-group
+          label(for='address') address:
+          input#address.form-control(type='text',  name='address')
+        div.form-group
+          label(for='loanAmount') loanAmount:
+          input#loanAmount.form-control(type='number' name='loanAmount')
+        div.form-group
+          label(for='interest') interest:
+          input#interest.form-control(type='number' name='interest')
+        div.form-group
+          label(for='loanTermYears') loanTermYears:
+          input#loanTermYears.form-control(type='number' name='loanTermYears')
+        div.form-group
+          label(for='loanType') loanType:
+          input#loanType.form-control(type='text' name='loanType')
+        div.form-group
+          label(for='description')  description:
+          input#description.form-control(type='text' name='description')
+        button.btn.btn-primary(type='submit') Create

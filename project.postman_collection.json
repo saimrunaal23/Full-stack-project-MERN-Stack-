@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "75036053-353b-4b06-8345-0871827bfe62",
+		"name": "project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signup Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Sophie Louise Hart\",\r\n    \"email\": \"sophie@example.com\",\r\n    \"password\": \"password12345\",\r\n    \"passwordConfirm\": \"password12345\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loans",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzODg2YTNlYzExYzdhODUzNWZiZWU2NiIsImlhdCI6MTY2OTg4NDQ3OSwiZXhwIjoxNjc3NjYwNDc5fQ.fckRE10AWN9TzUag-FFyqeRl-9KC2g8h8oNWtm3KOnY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"customerName\":\"davidbek\",\r\n\"phoneNumber\":822338976,\r\n\"email\":\"davidbek@gmail.com\",\r\n\"address\":\"2320 E Apache st, Tempe, AZ-85281\",\r\n\"loanAmount\":9000,\r\n\"interest\":2,\r\n\"loanTermYears\":2,\r\n\"loanType\":\"personal loan\",\r\n\"description\":\"Personal finances\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/loan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"loan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "loans",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
